@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --clr-primary-cyan: hsl(179, 62%, 43%);
+  --clr-primary-yellow: hsl(71, 73%, 54%);
+  --clr-neutral-gray: hsl(204, 43%, 93%);
+  --clr-neutral-blue: hsl(218, 22%, 67%);
+}
+
+body,
+section,
+button,
+div,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  margin-block: 20%;
+  background: var(--clr-neutral-gray);
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    margin: 20%;
+  }
+}
+
+.container {
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+section {
+  padding: 2em;
+}
+
+.sec-nested {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-nested section {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .sec-nested {
+    flex-direction: row;
+  }
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+}
+
+.money > * {
+  align-self: center;
+}
+
+button {
+  background: var(--clr-primary-yellow);
+  width: 100%;
+  padding: 5%;
+  border-radius: 0.5em;
+  cursor: pointer;
+	border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition-duration: 0.3s;
+}
+
+button:hover,
+button:focus,
+button:active {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sec-first {
+  background: white;
+}
+
+.sec-second,
+.sec-third {
+  background: var(--clr-primary-cyan);
+}
+
+.sec-third {
+  opacity: 0.7;
+}
+
+.sec-first h1 {
+  color: var(--clr-primary-cyan);
+}
+
+h3 {
+  color: var(--clr-primary-yellow);
+}
+
+.sec-first p {
+  color: var(--clr-neutral-blue);
+}
+
+.sec-second h1,
+.sec-third h1,
+span,
+button {
+  color: white;
+}
+
+.sec-second h4,
+.sec-second p,
+.sec-third p {
+  color: var(--clr-neutral-gray);
+}
+
+.sec-second p {
+  opacity: 0.6;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h4 {
+  margin-block: 1.5em;
+}
+
+.sec-first p {
+  padding-right: 0;
+}
+
+.sec-second p {
+  margin-left: 0.7em;
+}
+
+span,
+button {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+h3,
+button {
+  font-size: 1em;
+}
+
+h3,
+.sec-third p {
+	line-height: 1.5;
+}
+
+.sec-first p {
+  font-size: 0.87em;
+  line-height: 2;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+.sec-second p {
+  font-size: 1.2em;
+}
+
+span {
+  font-size: 2.4em;
+}
+
+.sec-third p {
+	font-size: 0.9em;
+}
+
+@media screen and (min-width: 500px) {
+
+  h1,
+	span {
+    font-size: 2em;
+  }
+
+	h3,
+  .sec-nested h1 {
+    font-size: 1.5em;
+  }
+
+  .sec-first p {
+    font-size: 1.3em;
+    line-height: 2;
+    padding-right: 4em;
+  }
+
+	h3,
+	.sec-third p {
+		line-height: 1.5;
+	}
+
+  .sec-third p {
+    font-size: 1em;
+  }
+}
+
+.attribution {
+  margin-block: 1em;
+  line-height: 2em;
+  font-size: 1em;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
